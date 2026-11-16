@@ -1,16 +1,18 @@
 
 /*
   MNGWA PROJECT! — LIODEN BREEDING DEN
-  VERSION 2 — ROSE & CHERRY EDITION
+  Soft Rose & Cherry Edition
+  Complete updated stylesheet — Version 3
 
-  Complete replacement stylesheet.
-  Font: Quicksand + DM Serif Display
+  Save as: Mngwa-Project.css
 */
 
-/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
 
-/* COLOR PALETTE */
+/* ========================================
+   COLOR PALETTE
+======================================== */
+
 :root {
   --mp-cream: #fff8f6;
   --mp-paper: #fffdfc;
@@ -22,18 +24,19 @@
   --mp-ink: #593b43;
   --mp-muted: #987780;
   --mp-line: #edcbd2;
-  --mp-shadow: 0 3px 14px rgba(113,52,72,.09);
+  --mp-shadow: 0 3px 14px rgba(113, 52, 72, .09);
 }
 
-/* =================================
-   MAIN PAGE
-================================= */
+/* ========================================
+   PAGE BACKGROUND & DEFAULT TEXT
+======================================== */
 
-html, body {
+html,
+body {
   background: #f8e9e9 !important;
   color: var(--mp-ink) !important;
-  font-family: 'Quicksand', sans-serif !important;
-  font-size: 14px !important;
+  font-family: 'Quicksand', Arial, sans-serif !important;
+  font-size: 14px;
 }
 
 body {
@@ -44,15 +47,11 @@ body {
   background-attachment: fixed !important;
 }
 
-body, p, span, div, td, th, label, li,
-input, select, textarea, button {
-  font-family: 'Quicksand', sans-serif !important;
-}
-
-a, a:visited {
+a,
+a:visited {
   color: var(--mp-cherry) !important;
   text-decoration: none !important;
-  transition: color .18s ease;
+  transition: color .18s ease, opacity .18s ease;
 }
 
 a:hover {
@@ -60,58 +59,83 @@ a:hover {
   text-decoration: underline !important;
 }
 
-/* =================================
-   HEADINGS
-================================= */
+/* ========================================
+   MAIN PAGE & SIDEBAR
+======================================== */
 
-h1, h2, h3, h4, h5, h6,
-.page-header, .panel-title, .box-title {
-  color: var(--mp-wine) !important;
-  font-family: 'DM Serif Display', serif !important;
-  font-weight: normal !important;
-}
-
-h1 {
-  font-size: 28px !important;
-}
-
-h2 {
-  font-size: 24px !important;
-}
-
-h3 {
-  font-size: 20px !important;
-}
-
-/* =================================
-   MAIN CONTENT & SIDEBAR
-================================= */
-
-#main, #main-content, #content,
-.main, .content, #page, #container,
-.container, #maincontainer {
+#main,
+#main-content,
+#content,
+.main,
+.content,
+#page,
+#container,
+.container,
+#maincontainer {
   color: var(--mp-ink) !important;
 }
 
-#main, #main-content, #content,
-.main, .content {
+#main,
+#main-content,
+#content,
+.main,
+.content {
   background: rgba(255,253,252,.96) !important;
 }
 
-#sidebar, #right, .sidebar, #rightsidebar {
+#sidebar,
+#right,
+.sidebar,
+#rightsidebar {
   background: rgba(250,237,239,.94) !important;
   color: var(--mp-ink) !important;
 }
 
-/* =================================
-   PANELS & CARDS
-================================= */
+/* ========================================
+   HEADINGS & TYPOGRAPHY
+======================================== */
 
-.panel, .card, .well, .box,
-.sidebar-box, .inner,
-#sidebar .panel, #sidebar .well,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page-header,
+.panel-title,
+.box-title {
+  color: var(--mp-wine) !important;
+  font-family: 'DM Serif Display', Georgia, serif !important;
+  font-weight: 400 !important;
+}
+
+p,
+span,
+div,
+td,
+th,
+li,
+label,
+small {
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+/* ========================================
+   PANELS & CARDS
+======================================== */
+
+.panel,
+.card,
+.well,
+.box,
+.sidebar-box,
+.inner,
+#sidebar .panel,
+#sidebar .well,
 #sidebar .box,
-#main .panel, #main .well, #main .box {
+#main .panel,
+#main .well,
+#main .box {
   background: var(--mp-paper) !important;
   border: 1px solid var(--mp-line) !important;
   border-radius: 8px !important;
@@ -119,28 +143,31 @@ h3 {
   color: var(--mp-ink) !important;
 }
 
-.panel-heading, .box-header,
-.well-header, .panel > .panel-heading,
+.panel-heading,
+.box-header,
+.well-header,
+.panel > .panel-heading,
 .card-header {
-  background: linear-gradient(
-    90deg, #f1cbd3, #f8e4e8
-  ) !important;
+  background: linear-gradient(90deg, #f1cbd3, #f8e4e8) !important;
   border-color: var(--mp-line) !important;
   color: var(--mp-wine) !important;
   border-radius: 7px 7px 0 0 !important;
 }
 
-/* =================================
-   LION TABLES
-================================= */
+/* ========================================
+   TABLES & LION LISTS
+======================================== */
 
 table {
   border-color: var(--mp-line) !important;
   color: var(--mp-ink) !important;
 }
 
-th, thead td, .table th,
-.table thead td, .table-header,
+th,
+thead td,
+.table th,
+.table thead td,
+.table-header,
 .table thead th {
   background: #e8b3c0 !important;
   color: #542d3a !important;
@@ -148,7 +175,8 @@ th, thead td, .table th,
   font-weight: 700 !important;
 }
 
-td, .table td {
+td,
+.table td {
   border-color: #f0d6dc !important;
 }
 
@@ -167,25 +195,32 @@ tr:hover td,
   background: #f8e0e6 !important;
 }
 
-/* =================================
-   FEATURED LION
-================================= */
+/* ========================================
+   LION IMAGES & FEATURED LION AREA
+======================================== */
 
-#lion_image, #lion_image > div,
-.lion-image, .featured-lion,
-#featured, #featured-lion, .featuredLion {
+#lion_image,
+#lion_image > div,
+.lion-image,
+.featured-lion,
+#featured,
+#featured-lion,
+.featuredLion {
   border-color: var(--mp-line) !important;
   border-radius: 9px !important;
 }
 
-#lion_image, .lion-image,
-.featured-lion, #featured-lion {
+#lion_image,
+.lion-image,
+.featured-lion,
+#featured-lion {
   background: #f7e5e8 !important;
   box-shadow: var(--mp-shadow) !important;
   overflow: hidden;
 }
 
-#lion_image img, .lion-image img,
+#lion_image img,
+.lion-image img,
 .featured-lion img {
   border-radius: 5px !important;
 }
@@ -197,70 +232,83 @@ tr:hover td,
   color: #fff9f8 !important;
 }
 
-/* =================================
-   NAVIGATION & BREADCRUMBS
-================================= */
+/* ========================================
+   BREADCRUMBS & NAVIGATION
+======================================== */
 
-.breadcrumb, .breadcrumb a,
+.breadcrumb,
+.breadcrumb a,
 .breadcrumb li {
   background: #f8e9ec !important;
   color: var(--mp-cherry) !important;
   border-color: var(--mp-line) !important;
 }
 
-.navbar, .navbar-default,
-#navbar, #navigation {
+.navbar,
+.navbar-default,
+#navbar,
+#navigation {
   background: #b85e77 !important;
   border-color: #a94e68 !important;
 }
 
-.navbar a, .navbar-default a,
-#navbar a, #navigation a {
+.navbar a,
+.navbar-default a,
+#navbar a,
+#navigation a {
   color: #fff9f8 !important;
 }
 
-.navbar a:hover, .navbar-default a:hover,
-#navbar a:hover, #navigation a:hover {
+.navbar a:hover,
+.navbar-default a:hover,
+#navbar a:hover,
+#navigation a:hover {
   background: #a94761 !important;
   color: #ffffff !important;
 }
 
-/* =================================
+/* ========================================
    BUTTONS
-================================= */
+======================================== */
 
-button, input[type="button"],
-input[type="submit"], input[type="reset"],
-.btn, .button, a.button, .pagination a {
-  background: linear-gradient(
-    180deg, #f0c4ce, #dfa0af
-  ) !important;
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+.button,
+a.button,
+.pagination a {
+  background: linear-gradient(180deg, #f0c4ce, #dfa0af) !important;
   border: 1px solid #cc8294 !important;
   border-radius: 6px !important;
   color: #5b3040 !important;
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Quicksand', Arial, sans-serif !important;
   font-weight: 700 !important;
   box-shadow: 0 2px 4px rgba(113,52,72,.10) !important;
   text-shadow: none !important;
 }
 
-button:hover, input[type="button"]:hover,
+button:hover,
+input[type="button"]:hover,
 input[type="submit"]:hover,
-.btn:hover, .button:hover,
-a.button:hover, .pagination a:hover {
-  background: linear-gradient(
-    180deg, #d9859a, #c86b83
-  ) !important;
+.btn:hover,
+.button:hover,
+a.button:hover,
+.pagination a:hover {
+  background: linear-gradient(180deg, #d9859a, #c86b83) !important;
   border-color: #b95b74 !important;
   color: #fffaf9 !important;
 }
 
-/* =================================
-   FORMS & INPUTS
-================================= */
+/* ========================================
+   FORMS, TEXT FIELDS & SELECTORS
+======================================== */
 
 input:not([type="button"]):not([type="submit"]):not([type="reset"]),
-select, textarea, .form-control {
+select,
+textarea,
+.form-control {
   background: #fffdfc !important;
   border: 1px solid #dfb6c0 !important;
   border-radius: 5px !important;
@@ -268,180 +316,177 @@ select, textarea, .form-control {
   box-shadow: inset 0 1px 2px rgba(113,52,72,.04) !important;
 }
 
-input:focus, select:focus,
-textarea:focus, .form-control:focus {
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus {
   border-color: #c86b83 !important;
   outline: 2px solid rgba(200,107,131,.15) !important;
 }
 
-/* =================================
-   CHATBOX — COMPLETE RECOLOR
-================================= */
+/* ========================================
+   LIODEN CHATBOX — MAIN CONTAINER
+======================================== */
 
-/* Main chat container */
+#chatMessageContainer,
+div#chatMessageContainer {
+  background: #fff8f6 !important;
+  border: 2px solid #edcbd2 !important;
+  border-radius: 8px !important;
+  color: #593b43 !important;
+  box-shadow: var(--mp-shadow) !important;
+}
 
-#fra_chatContainer,
-#chatbox, #chat_box, #chatBox,
-.chatbox, .chat-box, #chat,
-.chat-container, #chat-container {
+/* General chat text */
+
+#chatMessageContainer,
+#chatMessageContainer *,
+.s-chat-message,
+.s-chat-message * {
+  color: #593b43 !important;
+  font-family: 'Quicksand', Arial, sans-serif !important;
+}
+
+/* Individual chat messages */
+
+.s-chat-message {
+  background: #fff8f6 !important;
+  border-color: #edcbd2 !important;
+  color: #593b43 !important;
+  padding: 5px !important;
+}
+
+/* Alternating message backgrounds */
+
+.s-chat-message:nth-child(odd) {
+  background: #fff8f6 !important;
+}
+
+.s-chat-message:nth-child(even) {
+  background: #f8e3e7 !important;
+}
+
+/* Pinned chat announcement */
+
+#chatMessagePinned,
+.s-chat-message__pinned {
+  background: #e9b6c2 !important;
+  border: 1px solid #d99aaa !important;
+  border-radius: 5px !important;
+  color: #593b43 !important;
+}
+
+#chatMessagePinned *,
+.s-chat-message__pinned * {
+  color: #593b43 !important;
+}
+
+/* Chat timestamps */
+
+.s-chat-message_timestamp {
+  color: #987780 !important;
+  font-size: 11px !important;
+}
+
+/* Chat claim links */
+
+.s-chat-message_claim,
+.s-chat-message_claim a {
+  color: #a94761 !important;
+}
+
+/* ========================================
+   CHATBOX CHANNEL MENU & CONTROLS
+======================================== */
+
+button#label_currentChannel,
+#label_currentChannel {
+  background: #a94761 !important;
+  border: 1px solid #8f3049 !important;
+  color: #ffffff !important;
+  border-radius: 5px !important;
+}
+
+button#label_currentChannel:hover,
+#label_currentChannel:hover {
+  background: #713448 !important;
+  color: #ffffff !important;
+}
+
+.s-chat-sidebar #fraChatChannelMenu,
+#fraChatChannelMenu,
+.channelMenu,
+.channelMenu .channelSwitcher {
+  background: #fff8f6 !important;
+  border: 1px solid #edcbd2 !important;
+  color: #593b43 !important;
+}
+
+#fraChatChannelMenu *,
+.channelMenu *,
+.channelMenu .channelSwitcher * {
+  color: #593b43 !important;
+}
+
+#fraChatChannelMenu a:hover,
+.channelMenu a:hover {
+  background: #f8e3e7 !important;
+  color: #a94761 !important;
+}
+
+/* Chat inputs and text areas */
+
+#chatMessageContainer input,
+#chatMessageContainer textarea,
+#chatMessageContainer select,
+#chatMessageContainer .form-control {
+  background: #fffdfc !important;
+  border: 1px solid #dfb6c0 !important;
+  border-radius: 5px !important;
+  color: #593b43 !important;
+}
+
+/* Chat buttons */
+
+#chatMessageContainer button,
+#chatMessageContainer input[type="button"],
+#chatMessageContainer input[type="submit"],
+#chatMessageContainer .btn {
+  background: #edc0ca !important;
+  border: 1px solid #d58b9d !important;
+  color: #593344 !important;
+  border-radius: 5px !important;
+}
+
+#chatMessageContainer button:hover,
+#chatMessageContainer .btn:hover {
+  background: #a94761 !important;
+  color: #ffffff !important;
+}
+
+/* Other possible chat wrappers */
+
+#chatbox,
+#chat_box,
+#chatBox,
+.chatbox,
+.chat-box,
+#chat,
+.chat-container,
+#chat-container {
   background: #fff8f7 !important;
   border: 1px solid var(--mp-line) !important;
   border-radius: 8px !important;
   color: var(--mp-ink) !important;
   box-shadow: var(--mp-shadow) !important;
-  font-family: 'Quicksand', sans-serif !important;
 }
 
-/* Chat message container */
-
-#chatMessageContainer {
-  background: #fff8f7 !important;
-  border: 1px solid var(--mp-line) !important;
-  border-radius: 5px !important;
-}
-
-/* Alternating chat messages */
-
-.s-chat-message:nth-child(odd) {
-  background: #fff8f7 !important;
-  color: var(--mp-ink) !important;
-  border: none !important;
-}
-
-.s-chat-message:nth-child(even) {
-  background: #f8e8ec !important;
-  color: var(--mp-ink) !important;
-  border: none !important;
-}
-
-/* All chat message text */
-
-.s-chat-message,
-.s-chat-message *,
-.s-chat-message a {
-  font-family: 'Quicksand', sans-serif !important;
-  color: var(--mp-ink) !important;
-}
-
-/* Pinned announcement */
-
-.s-chat-message__pinned,
-#chatMessagePinned {
-  background: #e9b6c2 !important;
-  color: #593b43 !important;
-  border: none !important;
-  border-bottom: 1px solid #d99aaa !important;
-  font-family: 'Quicksand', sans-serif !important;
-}
-
-/* Pinned message links */
-
-.s-chat-message__pinned a,
-#chatMessagePinned a {
-  color: #713448 !important;
-}
-
-/* Message timestamps */
-
-.s-chat-message_timestamp {
-  color: #a77b87 !important;
-  font-family: 'Quicksand', sans-serif !important;
-  font-size: 11px !important;
-}
-
-/* Message usernames */
-
-.s-chat-message_username,
-.s-chat-message__username {
-  font-weight: 700 !important;
-}
-
-/* Giveaway claim messages */
-
-.s-chat-message_claim {
-  background: #f1d0d8 !important;
-  color: #593b43 !important;
-  border-bottom: 1px solid #e4b9c4 !important;
-}
-
-/* Chat channel selector */
-
-button#label_currentChannel {
-  background: #e9b6c2 !important;
-  color: #593344 !important;
-  border: 1px solid #d58b9d !important;
-  border-radius: 5px !important;
-  font-family: 'Quicksand', sans-serif !important;
-  font-weight: 700 !important;
-}
-
-button#label_currentChannel:hover {
-  background: #cf788d !important;
-  color: #fffaf9 !important;
-}
-
-/* Channel menu background */
-
-.s-chat-sidebar #fraChatChannelMenu {
-  background: #fff8f6 !important;
-  border: 1px solid var(--mp-line) !important;
-  border-radius: 6px !important;
-  box-shadow: var(--mp-shadow) !important;
-}
-
-/* Channel menu options */
-
-#fra_chatContainer .channelMenu .channelSwitcher {
-  background: #fff8f6 !important;
-  color: var(--mp-cherry) !important;
-  font-family: 'Quicksand', sans-serif !important;
-}
-
-#fra_chatContainer .channelMenu .channelSwitcher:hover,
-#fra_chatContainer .channelMenu .channelSwitcher.active {
-  background: #e9b6c2 !important;
-  color: #593344 !important;
-}
-
-/* Chat controls */
-
-#fra_chatContainer button,
-#fra_chatContainer input,
-#fra_chatContainer select,
-#fra_chatContainer textarea {
-  font-family: 'Quicksand', sans-serif !important;
-  border-radius: 5px !important;
-}
-
-#fra_chatContainer input,
-#fra_chatContainer textarea,
-#fra_chatContainer select {
-  background: #fffdfc !important;
-  border: 1px solid #dfb6c0 !important;
-  color: #593b43 !important;
-}
-
-/* Chat send button */
-
-#fra_chatContainer button[type="submit"],
-#fra_chatContainer #btnChatPost {
-  background: #e9b6c2 !important;
-  color: #593344 !important;
-  border: 1px solid #d58b9d !important;
-}
-
-/* Chat scroll area */
-
-#chatMessageContainer,
-#chatMessageContainer * {
-  scrollbar-color: #d58b9d #f8e3e7;
-}
-
-/* =================================
+/* ========================================
    PROGRESS BARS
-================================= */
+======================================== */
 
-.progress, .progress-bar-container {
+.progress,
+.progress-bar-container {
   background: #f1e5e7 !important;
   border: 1px solid #e7cbd1 !important;
   border-radius: 20px !important;
@@ -452,48 +497,70 @@ button#label_currentChannel:hover {
   border-radius: 20px !important;
 }
 
+/* Experience */
+
 .progress-bar-success,
-.progress-bar.exp, .exp-bar {
+.progress-bar.exp,
+.exp-bar {
   background: #83b99a !important;
 }
 
+/* Energy */
+
 .progress-bar-warning,
-.progress-bar.energy, .energy-bar {
+.progress-bar.energy,
+.energy-bar {
   background: #e6b46f !important;
 }
 
+/* Hunger */
+
 .progress-bar-danger,
-.progress-bar.hunger, .hunger-bar {
+.progress-bar.hunger,
+.hunger-bar {
   background: #cb7180 !important;
 }
 
+/* Impression */
+
 .progress-bar-info,
-.progress-bar.imp, .imp-bar {
+.progress-bar.imp,
+.imp-bar {
   background: #8caed0 !important;
 }
 
-/* =================================
+/* ========================================
    CAVE STATS & SETTINGS
-================================= */
+======================================== */
 
-#cave-stats, .cave-stats, .cavestats,
-#cave-settings, .cave-settings, .settings {
+#cave-stats,
+.cave-stats,
+.cavestats,
+#cave-settings,
+.cave-settings,
+.settings {
   background: #fffaf9 !important;
   border: 1px solid var(--mp-line) !important;
   color: var(--mp-ink) !important;
   border-radius: 7px !important;
 }
 
-textarea, .description, #description {
+textarea,
+.description,
+#description {
   color: var(--mp-ink) !important;
 }
 
-/* =================================
-   ALERTS, DROPDOWNS & TOOLTIPS
-================================= */
+/* ========================================
+   ALERTS, TOOLTIPS & DROPDOWNS
+======================================== */
 
-.alert, .popover, .dropdown-menu,
-.tooltip-inner, .ui-tooltip, .modal-content {
+.alert,
+.popover,
+.dropdown-menu,
+.tooltip-inner,
+.ui-tooltip,
+.modal-content {
   background: #fff8f7 !important;
   border: 1px solid var(--mp-line) !important;
   color: var(--mp-ink) !important;
@@ -509,15 +576,16 @@ textarea, .description, #description {
   color: var(--mp-wine) !important;
 }
 
-/* =================================
+/* ========================================
    SMALL DETAILS
-================================= */
+======================================== */
 
 hr {
   border-color: #edcbd2 !important;
 }
 
-.badge, .label {
+.badge,
+.label {
   background: #d98da0 !important;
   color: #fffaf9 !important;
 }
@@ -527,31 +595,28 @@ hr {
   color: #542d3a;
 }
 
-/* =================================
-   SCROLLBARS
-================================= */
-
-* {
-  scrollbar-color: #d58b9d #f8e3e7;
-}
-
-/* =================================
-   RESPONSIVE SAFETY
-================================= */
+/* ========================================
+   RESPONSIVE LAYOUT
+======================================== */
 
 img {
   max-width: 100%;
 }
 
 @media (max-width: 767px) {
-  #main, #main-content, #content,
-  .main, .content {
+  #main,
+  #main-content,
+  #content,
+  .main,
+  .content {
     padding-left: 8px !important;
     padding-right: 8px !important;
   }
 
-  #sidebar, #right,
-  .sidebar, #rightsidebar {
+  #sidebar,
+  #right,
+  .sidebar,
+  #rightsidebar {
     max-width: 100% !important;
   }
 }
