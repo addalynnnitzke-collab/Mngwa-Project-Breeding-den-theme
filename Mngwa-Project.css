@@ -1,17 +1,13 @@
 
 /*
-  MNGWA PROJECT! — LIODEN BREEDING DEN
-  Soft Rose & Cherry Edition
-  Complete updated stylesheet — Version 3
-
-  Save as: Mngwa-Project.css
+==================================================
+ MNGWA PROJECT! — LIODEN BREEDING DEN
+ VERSION 4 — ROSE & CHERRY EDITION
+ Complete replacement stylesheet
+==================================================
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
-
-/* ========================================
-   COLOR PALETTE
-======================================== */
 
 :root {
   --mp-cream: #fff8f6;
@@ -27,16 +23,15 @@
   --mp-shadow: 0 3px 14px rgba(113, 52, 72, .09);
 }
 
-/* ========================================
-   PAGE BACKGROUND & DEFAULT TEXT
-======================================== */
+/* ================================================
+   PAGE BACKGROUND
+================================================ */
 
 html,
 body {
   background: #f8e9e9 !important;
   color: var(--mp-ink) !important;
   font-family: 'Quicksand', Arial, sans-serif !important;
-  font-size: 14px;
 }
 
 body {
@@ -51,7 +46,6 @@ a,
 a:visited {
   color: var(--mp-cherry) !important;
   text-decoration: none !important;
-  transition: color .18s ease, opacity .18s ease;
 }
 
 a:hover {
@@ -59,9 +53,43 @@ a:hover {
   text-decoration: underline !important;
 }
 
-/* ========================================
-   MAIN PAGE & SIDEBAR
-======================================== */
+/* ================================================
+   GENERAL TYPOGRAPHY
+================================================ */
+
+body,
+p,
+span,
+div,
+td,
+th,
+li,
+label,
+small,
+input,
+select,
+textarea,
+button {
+  font-family: 'Quicksand', Arial, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page-header,
+.panel-title,
+.box-title {
+  color: var(--mp-wine) !important;
+  font-family: 'DM Serif Display', Georgia, serif !important;
+  font-weight: 400 !important;
+}
+
+/* ================================================
+   MAIN CONTENT & SIDEBAR
+================================================ */
 
 #main,
 #main-content,
@@ -70,8 +98,7 @@ a:hover {
 .content,
 #page,
 #container,
-.container,
-#maincontainer {
+.container {
   color: var(--mp-ink) !important;
 }
 
@@ -91,38 +118,9 @@ a:hover {
   color: var(--mp-ink) !important;
 }
 
-/* ========================================
-   HEADINGS & TYPOGRAPHY
-======================================== */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.page-header,
-.panel-title,
-.box-title {
-  color: var(--mp-wine) !important;
-  font-family: 'DM Serif Display', Georgia, serif !important;
-  font-weight: 400 !important;
-}
-
-p,
-span,
-div,
-td,
-th,
-li,
-label,
-small {
-  font-family: 'Quicksand', Arial, sans-serif;
-}
-
-/* ========================================
+/* ================================================
    PANELS & CARDS
-======================================== */
+================================================ */
 
 .panel,
 .card,
@@ -154,9 +152,9 @@ small {
   border-radius: 7px 7px 0 0 !important;
 }
 
-/* ========================================
-   TABLES & LION LISTS
-======================================== */
+/* ================================================
+   TABLES
+================================================ */
 
 table {
   border-color: var(--mp-line) !important;
@@ -195,9 +193,9 @@ tr:hover td,
   background: #f8e0e6 !important;
 }
 
-/* ========================================
-   LION IMAGES & FEATURED LION AREA
-======================================== */
+/* ================================================
+   LION PANELS & IMAGES
+================================================ */
 
 #lion_image,
 #lion_image > div,
@@ -206,15 +204,9 @@ tr:hover td,
 #featured,
 #featured-lion,
 .featuredLion {
+  background: #f7e5e8 !important;
   border-color: var(--mp-line) !important;
   border-radius: 9px !important;
-}
-
-#lion_image,
-.lion-image,
-.featured-lion,
-#featured-lion {
-  background: #f7e5e8 !important;
   box-shadow: var(--mp-shadow) !important;
   overflow: hidden;
 }
@@ -232,9 +224,9 @@ tr:hover td,
   color: #fff9f8 !important;
 }
 
-/* ========================================
-   BREADCRUMBS & NAVIGATION
-======================================== */
+/* ================================================
+   NAVIGATION
+================================================ */
 
 .breadcrumb,
 .breadcrumb a,
@@ -267,9 +259,9 @@ tr:hover td,
   color: #ffffff !important;
 }
 
-/* ========================================
+/* ================================================
    BUTTONS
-======================================== */
+================================================ */
 
 button,
 input[type="button"],
@@ -301,9 +293,9 @@ a.button:hover,
   color: #fffaf9 !important;
 }
 
-/* ========================================
-   FORMS, TEXT FIELDS & SELECTORS
-======================================== */
+/* ================================================
+   FORMS
+================================================ */
 
 input:not([type="button"]):not([type="submit"]):not([type="reset"]),
 select,
@@ -324,166 +316,198 @@ textarea:focus,
   outline: 2px solid rgba(200,107,131,.15) !important;
 }
 
-/* ========================================
-   LIODEN CHATBOX — MAIN CONTAINER
-======================================== */
+/* ================================================
+   CHATBOX — OUTER SIDEBAR
+   Based on the inspected Lioden HTML:
+   #fra_chatContainer.s-chat-sidebar
+================================================ */
 
-#chatMessageContainer,
-div#chatMessageContainer {
-  background: #fff8f6 !important;
-  border: 2px solid #edcbd2 !important;
+#fra_chatContainer,
+#fra_chatContainer.s-chat-sidebar,
+.s-chat-sidebar#fra_chatContainer {
+  background: #fff4f2 !important;
+  color: var(--mp-ink) !important;
+  border-color: var(--mp-line) !important;
   border-radius: 8px !important;
-  color: #593b43 !important;
   box-shadow: var(--mp-shadow) !important;
 }
 
-/* General chat text */
+/* Chat channel menu */
 
-#chatMessageContainer,
-#chatMessageContainer *,
-.s-chat-message,
-.s-chat-message * {
-  color: #593b43 !important;
-  font-family: 'Quicksand', Arial, sans-serif !important;
+#fra_chatContainer .channelMenu,
+#fra_chatContainer .channelMenu *,
+#fra_chatContainer #fraChatSettings {
+  background-color: #fff4f2 !important;
+  color: var(--mp-ink) !important;
+  border-color: var(--mp-line) !important;
 }
 
-/* Individual chat messages */
-
-.s-chat-message {
-  background: #fff8f6 !important;
-  border-color: #edcbd2 !important;
-  color: #593b43 !important;
-  padding: 5px !important;
+#fra_chatContainer .channelMenu a {
+  color: var(--mp-cherry) !important;
 }
 
-/* Alternating message backgrounds */
-
-.s-chat-message:nth-child(odd) {
-  background: #fff8f6 !important;
-}
-
-.s-chat-message:nth-child(even) {
+#fra_chatContainer .channelMenu a:hover {
   background: #f8e3e7 !important;
+  color: var(--mp-wine) !important;
 }
 
-/* Pinned chat announcement */
+/* ================================================
+   CHATBOX — MESSAGE CONTAINER
+================================================ */
 
-#chatMessagePinned,
-.s-chat-message__pinned {
-  background: #e9b6c2 !important;
-  border: 1px solid #d99aaa !important;
-  border-radius: 5px !important;
-  color: #593b43 !important;
-}
-
-#chatMessagePinned *,
-.s-chat-message__pinned * {
-  color: #593b43 !important;
-}
-
-/* Chat timestamps */
-
-.s-chat-message_timestamp {
-  color: #987780 !important;
-  font-size: 11px !important;
-}
-
-/* Chat claim links */
-
-.s-chat-message_claim,
-.s-chat-message_claim a {
-  color: #a94761 !important;
-}
-
-/* ========================================
-   CHATBOX CHANNEL MENU & CONTROLS
-======================================== */
-
-button#label_currentChannel,
-#label_currentChannel {
-  background: #a94761 !important;
-  border: 1px solid #8f3049 !important;
-  color: #ffffff !important;
-  border-radius: 5px !important;
-}
-
-button#label_currentChannel:hover,
-#label_currentChannel:hover {
-  background: #713448 !important;
-  color: #ffffff !important;
-}
-
-.s-chat-sidebar #fraChatChannelMenu,
-#fraChatChannelMenu,
-.channelMenu,
-.channelMenu .channelSwitcher {
+#fra_chatContainer #chatMessageContainer,
+#fra_chatContainer div#chatMessageContainer {
   background: #fff8f6 !important;
-  border: 1px solid #edcbd2 !important;
-  color: #593b43 !important;
-}
-
-#fraChatChannelMenu *,
-.channelMenu *,
-.channelMenu .channelSwitcher * {
-  color: #593b43 !important;
-}
-
-#fraChatChannelMenu a:hover,
-.channelMenu a:hover {
-  background: #f8e3e7 !important;
-  color: #a94761 !important;
-}
-
-/* Chat inputs and text areas */
-
-#chatMessageContainer input,
-#chatMessageContainer textarea,
-#chatMessageContainer select,
-#chatMessageContainer .form-control {
-  background: #fffdfc !important;
-  border: 1px solid #dfb6c0 !important;
-  border-radius: 5px !important;
-  color: #593b43 !important;
-}
-
-/* Chat buttons */
-
-#chatMessageContainer button,
-#chatMessageContainer input[type="button"],
-#chatMessageContainer input[type="submit"],
-#chatMessageContainer .btn {
-  background: #edc0ca !important;
-  border: 1px solid #d58b9d !important;
-  color: #593344 !important;
-  border-radius: 5px !important;
-}
-
-#chatMessageContainer button:hover,
-#chatMessageContainer .btn:hover {
-  background: #a94761 !important;
-  color: #ffffff !important;
-}
-
-/* Other possible chat wrappers */
-
-#chatbox,
-#chat_box,
-#chatBox,
-.chatbox,
-.chat-box,
-#chat,
-.chat-container,
-#chat-container {
-  background: #fff8f7 !important;
-  border: 1px solid var(--mp-line) !important;
+  background-color: #fff8f6 !important;
+  border: 2px solid #edcbd2 !important;
   border-radius: 8px !important;
   color: var(--mp-ink) !important;
   box-shadow: var(--mp-shadow) !important;
 }
 
-/* ========================================
+/* The message list itself */
+
+#fra_chatContainer #chatMessageList {
+  background: #fff8f6 !important;
+  background-color: #fff8f6 !important;
+  color: var(--mp-ink) !important;
+}
+
+/* ================================================
+   CHATBOX — INDIVIDUAL MESSAGES
+   Stronger selectors override Lioden's defaults.
+================================================ */
+
+/* All chat messages */
+
+#fra_chatContainer #chatMessageContainer #chatMessageList .s-chat-message,
+#fra_chatContainer #chatMessageContainer .s-chat-message,
+.s-chat-sidebar #chatMessageContainer .s-chat-message {
+  background: #fff8f6 !important;
+  background-color: #fff8f6 !important;
+  color: #593b43 !important;
+  border-color: #edcbd2 !important;
+  font-family: 'Quicksand', Arial, sans-serif !important;
+}
+
+/* Odd messages */
+
+#fra_chatContainer #chatMessageContainer #chatMessageList .s-chat-message:nth-child(odd),
+#fra_chatContainer #chatMessageContainer .s-chat-message:nth-child(odd),
+.s-chat-sidebar .s-chat-message:nth-child(odd) {
+  background: #fff8f6 !important;
+  background-color: #fff8f6 !important;
+  color: #593b43 !important;
+}
+
+/* Even messages — overrides Lioden's #E5E5E5 rule */
+
+#fra_chatContainer #chatMessageContainer #chatMessageList .s-chat-message:nth-child(even),
+#fra_chatContainer #chatMessageContainer .s-chat-message:nth-child(even),
+.s-chat-sidebar .s-chat-message:nth-child(even) {
+  background: #f8e3e7 !important;
+  background-color: #f8e3e7 !important;
+  color: #593b43 !important;
+}
+
+/* Message contents and links */
+
+#fra_chatContainer #chatMessageList .s-chat-message *,
+#fra_chatContainer #chatMessageList .s-chat-message_content,
+#fra_chatContainer #chatMessageList .s-chat-message_content *,
+#fra_chatContainer #chatMessageList .s-chat-message_claim {
+  color: #593b43 !important;
+  font-family: 'Quicksand', Arial, sans-serif !important;
+}
+
+/* Chat links */
+
+#fra_chatContainer #chatMessageList .s-chat-message a {
+  color: #a94761 !important;
+}
+
+#fra_chatContainer #chatMessageList .s-chat-message a:hover {
+  color: #713448 !important;
+}
+
+/* Timestamps */
+
+#fra_chatContainer #chatMessageList .s-chat-message_timestamp {
+  color: #987780 !important;
+  font-size: 11px !important;
+}
+
+/* Pinned announcement */
+
+#fra_chatContainer #chatMessagePinned,
+#fra_chatContainer .s-chat-message__pinned {
+  background: #e9b6c2 !important;
+  background-color: #e9b6c2 !important;
+  border: 1px solid #d99aaa !important;
+  border-radius: 5px !important;
+  color: #593b43 !important;
+}
+
+#fra_chatContainer #chatMessagePinned *,
+#fra_chatContainer .s-chat-message__pinned * {
+  color: #593b43 !important;
+}
+
+/* ================================================
+   CHATBOX — CHANNEL BUTTONS & CONTROLS
+================================================ */
+
+#fra_chatContainer button#label_currentChannel,
+#fra_chatContainer #label_currentChannel {
+  background: #a94761 !important;
+  background-color: #a94761 !important;
+  border: 1px solid #8f3049 !important;
+  color: #ffffff !important;
+  border-radius: 5px !important;
+}
+
+#fra_chatContainer button#label_currentChannel:hover,
+#fra_chatContainer #label_currentChannel:hover {
+  background: #713448 !important;
+  color: #ffffff !important;
+}
+
+/* Chat input fields */
+
+#fra_chatContainer #chatMessageContainer input,
+#fra_chatContainer #chatMessageContainer textarea,
+#fra_chatContainer #chatMessageContainer select,
+#fra_chatContainer #chatMessageContainer .form-control {
+  background: #fffdfc !important;
+  background-color: #fffdfc !important;
+  border: 1px solid #dfb6c0 !important;
+  border-radius: 5px !important;
+  color: #593b43 !important;
+  font-family: 'Quicksand', Arial, sans-serif !important;
+}
+
+/* Chat buttons */
+
+#fra_chatContainer #chatMessageContainer button,
+#fra_chatContainer #chatMessageContainer input[type="button"],
+#fra_chatContainer #chatMessageContainer input[type="submit"],
+#fra_chatContainer #chatMessageContainer .btn {
+  background: #edc0ca !important;
+  background-color: #edc0ca !important;
+  border: 1px solid #d58b9d !important;
+  color: #593344 !important;
+  border-radius: 5px !important;
+}
+
+#fra_chatContainer #chatMessageContainer button:hover,
+#fra_chatContainer #chatMessageContainer .btn:hover {
+  background: #a94761 !important;
+  color: #ffffff !important;
+}
+
+/* ================================================
    PROGRESS BARS
-======================================== */
+================================================ */
 
 .progress,
 .progress-bar-container {
@@ -497,15 +521,11 @@ button#label_currentChannel:hover,
   border-radius: 20px !important;
 }
 
-/* Experience */
-
 .progress-bar-success,
 .progress-bar.exp,
 .exp-bar {
   background: #83b99a !important;
 }
-
-/* Energy */
 
 .progress-bar-warning,
 .progress-bar.energy,
@@ -513,15 +533,11 @@ button#label_currentChannel:hover,
   background: #e6b46f !important;
 }
 
-/* Hunger */
-
 .progress-bar-danger,
 .progress-bar.hunger,
 .hunger-bar {
   background: #cb7180 !important;
 }
-
-/* Impression */
 
 .progress-bar-info,
 .progress-bar.imp,
@@ -529,9 +545,9 @@ button#label_currentChannel:hover,
   background: #8caed0 !important;
 }
 
-/* ========================================
-   CAVE STATS & SETTINGS
-======================================== */
+/* ================================================
+   CAVE SETTINGS & DESCRIPTION
+================================================ */
 
 #cave-stats,
 .cave-stats,
@@ -545,15 +561,14 @@ button#label_currentChannel:hover,
   border-radius: 7px !important;
 }
 
-textarea,
 .description,
 #description {
   color: var(--mp-ink) !important;
 }
 
-/* ========================================
+/* ================================================
    ALERTS, TOOLTIPS & DROPDOWNS
-======================================== */
+================================================ */
 
 .alert,
 .popover,
@@ -576,9 +591,9 @@ textarea,
   color: var(--mp-wine) !important;
 }
 
-/* ========================================
+/* ================================================
    SMALL DETAILS
-======================================== */
+================================================ */
 
 hr {
   border-color: #edcbd2 !important;
@@ -595,9 +610,9 @@ hr {
   color: #542d3a;
 }
 
-/* ========================================
+/* ================================================
    RESPONSIVE LAYOUT
-======================================== */
+================================================ */
 
 img {
   max-width: 100%;
