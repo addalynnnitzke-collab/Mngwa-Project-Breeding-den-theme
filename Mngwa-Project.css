@@ -1,16 +1,16 @@
-/*
-  MNGWA PROJECT! — Lioden Breeding Den
-  Soft rose / cherry palette
-  First-pass cave stylesheet built for the layout shown in the supplied screenshots.
-  Save as: Mngwa-Project.css
 
-  Note: Lioden may load parts of the chat separately. The outer chat panel and
-  visible controls are styled here; separately loaded message content may need
-  additional selectors if the site blocks cave CSS from reaching it.
+/*
+  MNGWA PROJECT! — LIODEN BREEDING DEN
+  VERSION 2 — ROSE & CHERRY EDITION
+
+  Complete replacement stylesheet.
+  Font: Quicksand + DM Serif Display
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
 
+/* COLOR PALETTE */
 :root {
   --mp-cream: #fff8f6;
   --mp-paper: #fffdfc;
@@ -22,15 +22,18 @@
   --mp-ink: #593b43;
   --mp-muted: #987780;
   --mp-line: #edcbd2;
-  --mp-soft-shadow: 0 3px 14px rgba(113, 52, 72, .09);
+  --mp-shadow: 0 3px 14px rgba(113,52,72,.09);
 }
 
-/* Page foundation */
+/* =================================
+   MAIN PAGE
+================================= */
+
 html, body {
   background: #f8e9e9 !important;
   color: var(--mp-ink) !important;
-  font-family: 'Nunito', Arial, sans-serif !important;
-  font-size: 14px;
+  font-family: 'Quicksand', sans-serif !important;
+  font-size: 14px !important;
 }
 
 body {
@@ -41,23 +44,57 @@ body {
   background-attachment: fixed !important;
 }
 
+body, p, span, div, td, th, label, li,
+input, select, textarea, button {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
 a, a:visited {
   color: var(--mp-cherry) !important;
   text-decoration: none !important;
-  transition: color .18s ease, opacity .18s ease;
+  transition: color .18s ease;
 }
+
 a:hover {
   color: var(--mp-wine) !important;
   text-decoration: underline !important;
 }
 
-/* Main page and columns */
-#main, #main-content, #content, .main, .content,
-#page, #container, .container, #maincontainer {
+/* =================================
+   HEADINGS
+================================= */
+
+h1, h2, h3, h4, h5, h6,
+.page-header, .panel-title, .box-title {
+  color: var(--mp-wine) !important;
+  font-family: 'DM Serif Display', serif !important;
+  font-weight: normal !important;
+}
+
+h1 {
+  font-size: 28px !important;
+}
+
+h2 {
+  font-size: 24px !important;
+}
+
+h3 {
+  font-size: 20px !important;
+}
+
+/* =================================
+   MAIN CONTENT & SIDEBAR
+================================= */
+
+#main, #main-content, #content,
+.main, .content, #page, #container,
+.container, #maincontainer {
   color: var(--mp-ink) !important;
 }
 
-#main, #main-content, #content, .main, .content {
+#main, #main-content, #content,
+.main, .content {
   background: rgba(255,253,252,.96) !important;
 }
 
@@ -66,119 +103,162 @@ a:hover {
   color: var(--mp-ink) !important;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6,
-.page-header, .panel-title, .box-title {
-  color: var(--mp-wine) !important;
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-weight: 600 !important;
-}
+/* =================================
+   PANELS & CARDS
+================================= */
 
-/* Panels, cards, side boxes */
-.panel, .card, .well, .box, .sidebar-box, .inner,
-#sidebar .panel, #sidebar .well, #sidebar .box,
+.panel, .card, .well, .box,
+.sidebar-box, .inner,
+#sidebar .panel, #sidebar .well,
+#sidebar .box,
 #main .panel, #main .well, #main .box {
   background: var(--mp-paper) !important;
   border: 1px solid var(--mp-line) !important;
   border-radius: 8px !important;
-  box-shadow: var(--mp-soft-shadow) !important;
+  box-shadow: var(--mp-shadow) !important;
   color: var(--mp-ink) !important;
 }
 
-.panel-heading, .box-header, .well-header,
-.panel > .panel-heading, .card-header {
-  background: linear-gradient(90deg, #f1cbd3, #f8e4e8) !important;
+.panel-heading, .box-header,
+.well-header, .panel > .panel-heading,
+.card-header {
+  background: linear-gradient(
+    90deg, #f1cbd3, #f8e4e8
+  ) !important;
   border-color: var(--mp-line) !important;
   color: var(--mp-wine) !important;
   border-radius: 7px 7px 0 0 !important;
 }
 
-/* Tables and lion lists */
+/* =================================
+   LION TABLES
+================================= */
+
 table {
   border-color: var(--mp-line) !important;
   color: var(--mp-ink) !important;
 }
 
-th, thead td, .table th, .table thead td,
-.table-header, .table thead th {
+th, thead td, .table th,
+.table thead td, .table-header,
+.table thead th {
   background: #e8b3c0 !important;
   color: #542d3a !important;
   border-color: #d99aaa !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
 }
 
 td, .table td {
   border-color: #f0d6dc !important;
 }
 
-tr:nth-child(odd) td, .table-striped > tbody > tr:nth-of-type(odd) > td {
+tr:nth-child(odd) td,
+.table-striped > tbody > tr:nth-of-type(odd) > td {
   background: #fff8f7 !important;
 }
-tr:nth-child(even) td, .table-striped > tbody > tr:nth-of-type(even) > td {
+
+tr:nth-child(even) td,
+.table-striped > tbody > tr:nth-of-type(even) > td {
   background: #fbedf0 !important;
 }
-tr:hover td, .table-hover > tbody > tr:hover > td {
+
+tr:hover td,
+.table-hover > tbody > tr:hover > td {
   background: #f8e0e6 !important;
 }
 
-/* Featured lion area */
-#lion_image, #lion_image > div, .lion-image, .featured-lion,
+/* =================================
+   FEATURED LION
+================================= */
+
+#lion_image, #lion_image > div,
+.lion-image, .featured-lion,
 #featured, #featured-lion, .featuredLion {
   border-color: var(--mp-line) !important;
   border-radius: 9px !important;
 }
-#lion_image, .lion-image, .featured-lion, #featured-lion {
+
+#lion_image, .lion-image,
+.featured-lion, #featured-lion {
   background: #f7e5e8 !important;
-  box-shadow: var(--mp-soft-shadow) !important;
+  box-shadow: var(--mp-shadow) !important;
   overflow: hidden;
 }
-#lion_image img, .lion-image img, .featured-lion img {
+
+#lion_image img, .lion-image img,
+.featured-lion img {
   border-radius: 5px !important;
 }
-#lion_image + div, .featured-lion-caption, .lion-caption {
+
+#lion_image + div,
+.featured-lion-caption,
+.lion-caption {
   background: #b95e77 !important;
   color: #fff9f8 !important;
 }
 
-/* Breadcrumbs and navigation */
-.breadcrumb, .breadcrumb a, .breadcrumb li {
+/* =================================
+   NAVIGATION & BREADCRUMBS
+================================= */
+
+.breadcrumb, .breadcrumb a,
+.breadcrumb li {
   background: #f8e9ec !important;
   color: var(--mp-cherry) !important;
   border-color: var(--mp-line) !important;
 }
-.navbar, .navbar-default, #navbar, #navigation {
+
+.navbar, .navbar-default,
+#navbar, #navigation {
   background: #b85e77 !important;
   border-color: #a94e68 !important;
 }
-.navbar a, .navbar-default a, #navbar a, #navigation a {
+
+.navbar a, .navbar-default a,
+#navbar a, #navigation a {
   color: #fff9f8 !important;
 }
+
 .navbar a:hover, .navbar-default a:hover,
 #navbar a:hover, #navigation a:hover {
   background: #a94761 !important;
   color: #ffffff !important;
 }
 
-/* Buttons */
-button, input[type="button"], input[type="submit"], input[type="reset"],
+/* =================================
+   BUTTONS
+================================= */
+
+button, input[type="button"],
+input[type="submit"], input[type="reset"],
 .btn, .button, a.button, .pagination a {
-  background: linear-gradient(180deg, #f0c4ce, #dfa0af) !important;
+  background: linear-gradient(
+    180deg, #f0c4ce, #dfa0af
+  ) !important;
   border: 1px solid #cc8294 !important;
   border-radius: 6px !important;
   color: #5b3040 !important;
-  font-family: 'Nunito', Arial, sans-serif !important;
-  font-weight: 800 !important;
+  font-family: 'Quicksand', sans-serif !important;
+  font-weight: 700 !important;
   box-shadow: 0 2px 4px rgba(113,52,72,.10) !important;
   text-shadow: none !important;
 }
-button:hover, input[type="button"]:hover, input[type="submit"]:hover,
-.btn:hover, .button:hover, a.button:hover, .pagination a:hover {
-  background: linear-gradient(180deg, #d9859a, #c86b83) !important;
+
+button:hover, input[type="button"]:hover,
+input[type="submit"]:hover,
+.btn:hover, .button:hover,
+a.button:hover, .pagination a:hover {
+  background: linear-gradient(
+    180deg, #d9859a, #c86b83
+  ) !important;
   border-color: #b95b74 !important;
   color: #fffaf9 !important;
 }
 
-/* Forms, text fields, selectors */
+/* =================================
+   FORMS & INPUTS
+================================= */
+
 input:not([type="button"]):not([type="submit"]):not([type="reset"]),
 select, textarea, .form-control {
   background: #fffdfc !important;
@@ -187,80 +267,215 @@ select, textarea, .form-control {
   color: #593b43 !important;
   box-shadow: inset 0 1px 2px rgba(113,52,72,.04) !important;
 }
-input:focus, select:focus, textarea:focus, .form-control:focus {
+
+input:focus, select:focus,
+textarea:focus, .form-control:focus {
   border-color: #c86b83 !important;
   outline: 2px solid rgba(200,107,131,.15) !important;
 }
 
-/* Chat box: outer container, channel controls, inputs and message surfaces */
-#chatbox, #chat_box, #chatBox, .chatbox, .chat-box,
-#chat, .chat-container, #chat-container {
+/* =================================
+   CHATBOX — COMPLETE RECOLOR
+================================= */
+
+/* Main chat container */
+
+#fra_chatContainer,
+#chatbox, #chat_box, #chatBox,
+.chatbox, .chat-box, #chat,
+.chat-container, #chat-container {
   background: #fff8f7 !important;
   border: 1px solid var(--mp-line) !important;
   border-radius: 8px !important;
   color: var(--mp-ink) !important;
-  box-shadow: var(--mp-soft-shadow) !important;
+  box-shadow: var(--mp-shadow) !important;
+  font-family: 'Quicksand', sans-serif !important;
 }
-#chatbox h1, #chatbox h2, #chatbox h3,
-#chat_box h1, #chat_box h2, #chat_box h3,
-.chatbox h1, .chatbox h2, .chatbox h3 {
-  color: var(--mp-wine) !important;
+
+/* Chat message container */
+
+#chatMessageContainer {
+  background: #fff8f7 !important;
+  border: 1px solid var(--mp-line) !important;
+  border-radius: 5px !important;
 }
-#chatbox select, #chat_box select, #chatBox select,
-.chatbox select, .chat-box select,
-#chatbox input, #chat_box input, #chatBox input,
-.chatbox input, .chat-box input,
-#chatbox textarea, #chat_box textarea, .chatbox textarea {
+
+/* Alternating chat messages */
+
+.s-chat-message:nth-child(odd) {
+  background: #fff8f7 !important;
+  color: var(--mp-ink) !important;
+  border: none !important;
+}
+
+.s-chat-message:nth-child(even) {
+  background: #f8e8ec !important;
+  color: var(--mp-ink) !important;
+  border: none !important;
+}
+
+/* All chat message text */
+
+.s-chat-message,
+.s-chat-message *,
+.s-chat-message a {
+  font-family: 'Quicksand', sans-serif !important;
+  color: var(--mp-ink) !important;
+}
+
+/* Pinned announcement */
+
+.s-chat-message__pinned,
+#chatMessagePinned {
+  background: #e9b6c2 !important;
+  color: #593b43 !important;
+  border: none !important;
+  border-bottom: 1px solid #d99aaa !important;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+/* Pinned message links */
+
+.s-chat-message__pinned a,
+#chatMessagePinned a {
+  color: #713448 !important;
+}
+
+/* Message timestamps */
+
+.s-chat-message_timestamp {
+  color: #a77b87 !important;
+  font-family: 'Quicksand', sans-serif !important;
+  font-size: 11px !important;
+}
+
+/* Message usernames */
+
+.s-chat-message_username,
+.s-chat-message__username {
+  font-weight: 700 !important;
+}
+
+/* Giveaway claim messages */
+
+.s-chat-message_claim {
+  background: #f1d0d8 !important;
+  color: #593b43 !important;
+  border-bottom: 1px solid #e4b9c4 !important;
+}
+
+/* Chat channel selector */
+
+button#label_currentChannel {
+  background: #e9b6c2 !important;
+  color: #593344 !important;
+  border: 1px solid #d58b9d !important;
+  border-radius: 5px !important;
+  font-family: 'Quicksand', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+button#label_currentChannel:hover {
+  background: #cf788d !important;
+  color: #fffaf9 !important;
+}
+
+/* Channel menu background */
+
+.s-chat-sidebar #fraChatChannelMenu {
+  background: #fff8f6 !important;
+  border: 1px solid var(--mp-line) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--mp-shadow) !important;
+}
+
+/* Channel menu options */
+
+#fra_chatContainer .channelMenu .channelSwitcher {
+  background: #fff8f6 !important;
+  color: var(--mp-cherry) !important;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+#fra_chatContainer .channelMenu .channelSwitcher:hover,
+#fra_chatContainer .channelMenu .channelSwitcher.active {
+  background: #e9b6c2 !important;
+  color: #593344 !important;
+}
+
+/* Chat controls */
+
+#fra_chatContainer button,
+#fra_chatContainer input,
+#fra_chatContainer select,
+#fra_chatContainer textarea {
+  font-family: 'Quicksand', sans-serif !important;
+  border-radius: 5px !important;
+}
+
+#fra_chatContainer input,
+#fra_chatContainer textarea,
+#fra_chatContainer select {
   background: #fffdfc !important;
   border: 1px solid #dfb6c0 !important;
   color: #593b43 !important;
-  border-radius: 5px !important;
-}
-#chatbox button, #chat_box button, #chatBox button,
-.chatbox button, .chat-box button,
-#chatbox .btn, #chat_box .btn, .chatbox .btn {
-  background: #edc0ca !important;
-  border-color: #d58b9d !important;
-  color: #593344 !important;
-}
-#chatbox .message, #chat_box .message, .chat-message,
-.chat-message-content, .chat-line, .chatlog, #chatlog,
-#chat-messages, .chat-messages, #chatbox-content {
-  color: var(--mp-ink) !important;
-}
-#chatbox .message:nth-child(odd), .chat-message:nth-child(odd),
-.chat-line:nth-child(odd) {
-  background: #fff5f4 !important;
-}
-#chatbox .message:nth-child(even), .chat-message:nth-child(even),
-.chat-line:nth-child(even) {
-  background: #f9e9ed !important;
 }
 
-/* Progress bars: keep each category distinct */
+/* Chat send button */
+
+#fra_chatContainer button[type="submit"],
+#fra_chatContainer #btnChatPost {
+  background: #e9b6c2 !important;
+  color: #593344 !important;
+  border: 1px solid #d58b9d !important;
+}
+
+/* Chat scroll area */
+
+#chatMessageContainer,
+#chatMessageContainer * {
+  scrollbar-color: #d58b9d #f8e3e7;
+}
+
+/* =================================
+   PROGRESS BARS
+================================= */
+
 .progress, .progress-bar-container {
   background: #f1e5e7 !important;
   border: 1px solid #e7cbd1 !important;
   border-radius: 20px !important;
   overflow: hidden;
 }
+
 .progress-bar {
   border-radius: 20px !important;
 }
-.progress-bar-success, .progress-bar.exp, .exp-bar {
+
+.progress-bar-success,
+.progress-bar.exp, .exp-bar {
   background: #83b99a !important;
 }
-.progress-bar-warning, .progress-bar.energy, .energy-bar {
+
+.progress-bar-warning,
+.progress-bar.energy, .energy-bar {
   background: #e6b46f !important;
 }
-.progress-bar-danger, .progress-bar.hunger, .hunger-bar {
+
+.progress-bar-danger,
+.progress-bar.hunger, .hunger-bar {
   background: #cb7180 !important;
 }
-.progress-bar-info, .progress-bar.imp, .imp-bar {
+
+.progress-bar-info,
+.progress-bar.imp, .imp-bar {
   background: #8caed0 !important;
 }
 
-/* Cave stats, settings, and description areas */
+/* =================================
+   CAVE STATS & SETTINGS
+================================= */
+
 #cave-stats, .cave-stats, .cavestats,
 #cave-settings, .cave-settings, .settings {
   background: #fffaf9 !important;
@@ -268,49 +483,75 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
   color: var(--mp-ink) !important;
   border-radius: 7px !important;
 }
+
 textarea, .description, #description {
   color: var(--mp-ink) !important;
 }
 
-/* Alerts, tooltips, popovers, dropdowns */
-.alert, .popover, .dropdown-menu, .tooltip-inner,
-.ui-tooltip, .modal-content {
+/* =================================
+   ALERTS, DROPDOWNS & TOOLTIPS
+================================= */
+
+.alert, .popover, .dropdown-menu,
+.tooltip-inner, .ui-tooltip, .modal-content {
   background: #fff8f7 !important;
   border: 1px solid var(--mp-line) !important;
   color: var(--mp-ink) !important;
   border-radius: 7px !important;
 }
+
 .dropdown-menu > li > a {
   color: var(--mp-cherry) !important;
 }
+
 .dropdown-menu > li > a:hover {
   background: #f8e3e7 !important;
   color: var(--mp-wine) !important;
 }
 
-/* Small details */
+/* =================================
+   SMALL DETAILS
+================================= */
+
 hr {
   border-color: #edcbd2 !important;
 }
+
 .badge, .label {
   background: #d98da0 !important;
   color: #fffaf9 !important;
 }
+
 ::selection {
   background: #e8b3c0;
   color: #542d3a;
 }
 
-/* Responsive safety */
+/* =================================
+   SCROLLBARS
+================================= */
+
+* {
+  scrollbar-color: #d58b9d #f8e3e7;
+}
+
+/* =================================
+   RESPONSIVE SAFETY
+================================= */
+
 img {
   max-width: 100%;
 }
+
 @media (max-width: 767px) {
-  #main, #main-content, #content, .main, .content {
+  #main, #main-content, #content,
+  .main, .content {
     padding-left: 8px !important;
     padding-right: 8px !important;
   }
-  #sidebar, #right, .sidebar, #rightsidebar {
+
+  #sidebar, #right,
+  .sidebar, #rightsidebar {
     max-width: 100% !important;
   }
 }
